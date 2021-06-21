@@ -20,8 +20,6 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import javax.xml.XMLConstants;
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.JAXBException;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
@@ -282,50 +280,6 @@ public class Util {
 		return source;
 	}
 
-	/**
-	 * @param context context package name
-	 * @return JAXB context
-	 * @throws XMLException if JAXB error occurs
-	 */
-	public static JAXBContext getContext(String context) {
-		try {
-			JAXBContext jaxbContext = JAXBContext.newInstance(context);
-			return jaxbContext;
-		} catch (JAXBException e) {
-			throw new XmlException("Error creating JAXB context", e);
-		}
-	}
-
-	/**
-	 * @param context context package name
-	 * @param classLoader class loader used to load classes from the context
-	 * @return JAXB context; loads the classes using given classloader
-	 * @throws XMLException if JAXB error occurs
-	 */
-	public static JAXBContext getContext(String context, 
-			ClassLoader classLoader) {
-		try {
-			JAXBContext jaxbContext = JAXBContext.newInstance(context, classLoader);
-			return jaxbContext;
-		} catch (JAXBException e) {
-			throw new XmlException("Error creating JAXB context", e);
-		}
-	}
-
-	/**
-	 * @param classesToBeBound
-	 * @return JAXBContext according to classes to bind 
-	 * Dependency classes are also loaded automatically.
-	 * @throws XMLException if JAXB error occurs
-	 */
-	public static JAXBContext getContext(Class<?>... classesToBeBound) {
-		try {
-			JAXBContext jaxbContext = JAXBContext.newInstance(classesToBeBound);
-			return jaxbContext;
-		} catch (JAXBException e) {
-			throw new XmlException("Error creating JAXB context", e);
-		}
-	}
 
 	/**
 	 * Returns XML transform templates from given reader containing XSLT 
