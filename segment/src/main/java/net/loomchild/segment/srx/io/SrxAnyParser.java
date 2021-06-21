@@ -32,7 +32,7 @@ public class SrxAnyParser implements SrxParser {
 	 * Creates SRX any parser using default SRX 2.0 parser.
 	 */
 	public SrxAnyParser() {
-		this(new Srx2Parser());
+		this(new Srx2SaxParser());
 	}
 	
 	/**

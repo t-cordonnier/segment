@@ -10,7 +10,6 @@ import net.loomchild.segment.srx.legacy.ReaderMatcherTest;
 import net.loomchild.segment.util.UtilTest;
 import net.loomchild.segment.srx.LanguageMapTest;
 import net.loomchild.segment.srx.TextManagerTest;
-import net.loomchild.segment.srx.io.SrxParsersTest;
 import net.loomchild.segment.srx.io.SrxTransformersTest;
 import net.loomchild.segment.srx.legacy.AccurateSrxTextIteratorStringTest;
 import net.loomchild.segment.srx.legacy.FastTextIteratorReaderTest;
@@ -27,7 +26,6 @@ import org.junit.runners.Suite;
 	SrxDocumentTest.class,
 	TextManagerTest.class,
 	SrxVersionTest.class,
-	SrxParsersTest.class, 
 	SrxTransformersTest.class,
 	UtilTest.class,
 	SrxTextIteratorStringTest.class,

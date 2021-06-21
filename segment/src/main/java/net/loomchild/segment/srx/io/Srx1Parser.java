@@ -28,7 +28,7 @@ public class Srx1Parser implements SrxParser {
 		SrxTransformer transformer = new Srx1Transformer();
 		Map<String, Object> parameterMap = Collections.emptyMap();
 		Reader reader2 = transformer.transform(reader, parameterMap);
-		SrxParser parser2 = new Srx2Parser();
+		SrxParser parser2 = new Srx2StaxParser();
 		return parser2.parse(reader2);
 	}
 
