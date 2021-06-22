@@ -71,8 +71,9 @@ public class Srx2StaxParser implements SrxParser {
 			    		beforeBreak = parser.getElementText();
 			    	} else if ("afterbreak".equals(name)) {
 			    		afterBreak = parser.getElementText();
+			    	} else if ("header".equals(name)) {
+			    		document.setCascade("true".equals(parser.getAttributeValue(null,"cascade")));
 			    	}
-			    	// TODO: cascade
 			    	
 			    } else if (event == XMLStreamConstants.END_ELEMENT) {
 			    	String name = parser.getLocalName();
